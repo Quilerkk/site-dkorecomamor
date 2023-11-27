@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jardins Permanentes</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vidaloka:wght@400&display=swap">
+  <style>
+    body {
+      font-family: 'Vidaloka', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #E2EFE2;
+      text-align: center;
+    }
+
+    header {
+      background-color: #b1c7b1;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+    }
+
+    nav {
+      text-align: center;
+      margin: 40px 0; 
+    }
+
+    nav a {
+      margin: 0 20px; 
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    #content {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      background-color: #b1c791;
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      font-family: 'Vidaloka', sans-serif;
+    }
+
+    #contato-content {
+      font-size: 24px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .flex-item {
+      flex: 1;
+      margin: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dkore com Amor</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showInicio()">Início</a>
+    <a href="#" onclick="showJardinsVerticais()">Jardins Verticais</a>
+    <a href="#" onclick="showContato()">Contato</a>
+  </nav>
+
+  <div id="content">
+
+  </div>
+
+  <script>
+    window.onload = showInicio;
+
+    function showInicio() {
+      document.getElementById('content').innerHTML = `
+        <h1 style="font-family: 'Vidaloka', sans-serif; font-weight: bold; font-size: 72px;">Jardins Permanentes</h1>
+        <p style="font-family: 'Vidaloka', sans-serif; font-size: 56px;">D-kore com Amor</p>
+        <p style="font-family: 'Vidaloka', sans-serif; font-size: 400px;"> </p>
+        <p style="font-family: 'Vidaloka', sans-serif; font-size: 32px;">Todo jardim começa com uma simples semente.</p>
+      `;
+    }
+
+    function showJardinsVerticais() {
+      document.getElementById('content').innerHTML = `
+        <h2>Nossos jardins!</h2>
+        <button class="button" onclick="showJardimExterno()">Jardim Externo</button>
+        <button class="button" onclick="showJardimInterno()">Jardim Interno</button>
+        <button class="button" onclick="showJardimFloral()">Jardim Floral</button>
+      `;
+    }
+
+    function showJardimExterno() {
+  document.getElementById('content').innerHTML = `
+    <h3>Jardim Externo</h3>
+    <div class="flex-container">
+      <div class="flex-item">
+        <img src="Externo.jpg" alt="Jardim Externo">
+      </div>
+      <div class="flex-item">
+        <p style="font-size: 20px;">Para o jardim externo são necessárias plantas siliconadas que não estragam facilmente com o tempo e a umidade. As plantas siliconadas são colocadas também em banheiros por conta da umidade. Para a realização do jardim externo, são necessárias placas de madeiramento e placas de buchinhos artificiais.</p>
+        <button class="button" onclick="showJardinsVerticais()">Voltar</button>
+      </div>
+    </div>
+  `;
+}
+
+function showJardimInterno() {
+  document.getElementById('content').innerHTML = `
+    <h3>Jardim Interno</h3>
+    <div class="flex-container">
+      <div class="flex-item">
+        <img src="Interno.jpg" alt="Jardim Interno">
+      </div>
+      <div class="flex-item">
+        <p style="font-size: 20px;">Para o jardim interno são oferecidas plantas artificiais como as de tecidos, siliconadas e as plásticas. Para a realização do jardim, são necessárias placas de madeiramento e placas de buchinhos artificiais.</p>
+        <button class="button" onclick="showJardinsVerticais()">Voltar</button>
+      </div>
+    </div>
+  `;
+}
+
+function showJardimFloral() {
+  document.getElementById('content').innerHTML = `
+    <h3>Jardim Floral</h3>
+    <div class="flex-container">
+      <div class="flex-item">
+        <img src="Floral.jpg" alt="Jardim Floral">
+      </div>
+      <div class="flex-item">
+        <p style="font-size: 20px;">Para o jardim floral devem ser escolhidas a cor e tamanho das rosas. Também é utilizado placas de buchinhos artificiais e placas para o madeiramento. O jardim floral é colocado na área interna do local.</p>
+        <button class="button" onclick="showJardinsVerticais()">Voltar</button>
+      </div>
+    </div>
+  `;
+}
+
+
+    function showContato() {
+      document.getElementById('content').innerHTML = `
+        <div id="contato-content">
+          <p>E se você quiser ver mais coisas sobre a gente, entre em contato com nosso Instagram ou nosso Whatsapp!</p>
+          <p>Instagram: @dkorecomamor<br>Contato: +55 (42) 99901-5777 </p>
+          <button class="button" onclick="showInicio()">Voltar</button>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
